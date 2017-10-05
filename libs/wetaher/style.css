@@ -1,0 +1,152 @@
+
+@import "https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css";
+
+#sunburst {
+  display: none;
+}
+.weather-nav {
+  box-shadow: 0px 10px 20px 1px rgba(0, 0, 0, 0.25);
+  width: 300px;
+  margin-left: 21px;
+  background-color: #2f2f2f;
+}
+.weather-nav>ul {
+  padding: 20px 24px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.weather-nav>ul>li>a {
+  display: block;
+  width: 50px;
+  text-align: center;
+  color: #aaa;
+  cursor: pointer;
+}
+.weather-nav>ul>li>a:hover {
+  color: #444;
+}
+.weather-nav>ul>li>a.active {
+  color: #4444ff;
+}
+
+#card {
+  border: 1px solid #bdbdbd;
+  box-shadow: 0px 10px 40px 10px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  width: 300px;
+  padding: 0;
+  height: 400px;
+  min-height: 300px;
+  margin: 20px 22px;
+  border-radius: 5px;
+  position: relative;
+}
+#card .details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  color: #4c4c4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: color 2s ease;
+  transition: color 2s ease;
+}
+.thunder #card .details {
+  color: #ddd;
+}
+#card .details .right {
+  text-align: right;
+}
+#card .details #date {
+  margin: 4px 0;
+}
+#card .details #summary {
+  font-weight: 600;
+  font-size: 22px;
+}
+#card .details .temp {
+  font-size: 60px;
+  line-height: 60px;
+}
+#card .details .temp span {
+  font-size: 18px;
+  line-height: 30px;
+  vertical-align: top;
+  margin-left: 5px;
+}
+
+.weather {
+  background-color: #4e7cff;
+  -webkit-transition: background-color 2s ease;
+  transition: background-color 2s ease;
+}
+.snow .weather {
+  background-color: #6d93ff;
+}
+
+.thunder .weather {
+  background-color: #9FA4AD;
+}
+.rain .weather {
+  background-color: #4e7cff;
+}
+.sun .weather {
+  background-color: #4e7cff;
+}
+.weather #inner {
+  background-color: white;
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+.weather .cloud {
+  -webkit-transition: fill 2s ease;
+  transition: fill 2s ease;
+}
+.weather #cloud1 {
+  fill: #efefef;
+}
+.thunder .weather #cloud1 {
+  fill: #9FA4AD;
+}
+.rain .weather #cloud1 {
+  fill: #9FA4AD;
+}
+.rain .weather #cloud2 {
+  fill: #8B8E98;
+}
+.rain .weather #cloud3 {
+  fill: #7B7988;
+}
+.weather #cloud2 {
+  fill: #E6E6E6;
+}
+.thunder .weather #cloud2 {
+  fill: #8B8E98;
+}
+.weather #cloud3 {
+  fill: #D5D5D5;
+}
+.thunder .weather #cloud3 {
+  fill: #7B7988;
+}
+
+#outer, #back {
+  position: fixed;
+  pointer-events: none;
+}

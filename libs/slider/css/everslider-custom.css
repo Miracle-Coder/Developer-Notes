@@ -1,0 +1,332 @@
+/* image slider */
+
+.image-slider .es-slides > li {
+	position: relative;
+}
+
+
+.image-caption {
+	position: absolute;
+	z-index: 2;
+	top: 8%;
+	right: 5%;
+	height: 35px;
+	overflow: hidden;
+}
+
+.image-caption span a {
+	display: block;
+	line-height: 15px;
+	padding: 10px;
+	color: #ddd;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: rgba(34, 34, 34, 0.7);
+	opacity: 0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+	-moz-transition: -moz-transform 0.3s, opacity 0.3s;
+	-o-transition: -o-transform 0.3s, opacity 0.3s;
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.image-slider .es-before-slide .image-caption span a {
+	opacity: 0;
+	-webkit-transform: translate(0, -35px);
+	-moz-transform: translate(0, -35px);
+	-o-transform: translate(0, -35px);
+	transform: translate(0, -35px);
+	-webkit-transition-duration: 0;
+	-moz-transition-duration: 0;
+	-o-transition-duration: 0;
+	transition-duration: 0;
+}
+
+.image-slider .es-after-slide .image-caption span a {
+	opacity: 1;
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+
+/* featured slider */
+
+.featured-slider {
+	padding-top: 20px;
+}
+
+.featured-slider .es-pagination {
+	left: 0;
+	top: 0;
+	bottom: auto;
+}
+
+.featured-slider .es-pagination a {
+	right: auto;
+	margin: 0 10px 0 0;
+}
+
+.featured-slider .es-slides > li {
+	width: 200px;
+	margin-right: 5px;
+}
+
+.featured-slider .featured-pic {
+	position: relative;
+	background: #fff;
+}
+
+.featured-slider .featured-pic img  {
+	opacity: 1;
+	-webkit-transition: opacity .3s;
+	-moz-transition: opacity .3s;
+	-o-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+.featured-slider .featured-pic:hover img {
+	opacity: 0.7;
+}
+
+.featured-slider .featured-pic:hover > a {
+	visibility: visible;
+}
+
+.featured-slider .featured-pic > a {
+	position: absolute;
+	visibility: hidden;
+	top: 50%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 65px;
+	padding: 5px 0;
+	margin-top: -15px;
+	text-align: center;
+	text-decoration: none;
+	font-family: Roboto Condensed;
+	line-height: 20px;
+	color: #fff;
+	background: #ff5452;
+	z-index: 1;
+}
+
+.featured-title {
+	padding: 8px 15px 8px;
+	color: #666;
+	background: #eee;
+	border-top: 2px solid #ccc;
+	border-bottom: 2px solid #ddd;
+}
+
+.featured-title > a {
+	display: block;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	color: #444;
+	font-size: 13px;
+	line-height: 15px;
+	margin-bottom: 3px;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.featured-title > a:hover {
+	color: #666;
+}
+
+.featured-title > span {
+	font-size: 11px;
+	font-family: Roboto Condensed;
+	line-height: 15px;
+	color: #666;
+}
+
+/* fullwidth slider */
+
+.fullwidth-slider .es-slides > li {
+	/* 1.6 ~ image width/height */
+
+	background: #111;
+	overflow: hidden;
+	background-size: cover;
+	background-position: center;
+}
+.slider-image {
+	background-size: cover;
+}
+
+.fullwidth-slider .es-navigation a {
+	top: 0;
+	margin-top: 0;
+	background: #F47755;
+}
+
+.fullwidth-slider .es-ticker {
+	bottom: auto;
+	top: 0;
+	margin-right: 34px;
+}
+
+
+.slider-carousel {
+	padding-bottom: 50px;
+}
+
+
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.slider-image {
+	font-family: 'Raleway', Arial, sans-serif;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+
+	color: #ffffff;
+	text-align: center;
+	font-size: 16px;
+	background-color: #000000;
+}
+.slider-image *,
+.slider-image *:before,
+.slider-image *:after {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.55s ease;
+	transition: all 0.55s ease;
+}
+.slider-image img {
+	max-width: 100%;
+	backface-visibility: hidden;
+	vertical-align: top;
+	opacity: 0.9;
+}
+.slider-image .fullwidth-title {
+	position: absolute;
+	top: 76%;
+	left: 160px;
+	padding: 5px 10px 10px;
+}
+.slider-image .fullwidth-title:before,
+.slider-image .fullwidth-title:after {
+	height: 2px;
+	width: 400px;
+	position: absolute;
+	content: '';
+	background-color: #ffffff;
+}
+.slider-image .fullwidth-title:before {
+	top: 0;
+	left: 17px;
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+}
+.slider-image .fullwidth-title:after {
+	bottom: 0;
+	right: 10px;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+}
+.slider-image .fullwidth-title div:before,
+.slider-image .fullwidth-title div:after {
+	width: 2px;
+	height: 420px;
+	position: absolute;
+	content: '';
+	background-color: #ffffff;
+}
+.slider-image .fullwidth-title div:before {
+	top: 10px;
+	right: 0;
+	-webkit-transform: translateY(100%);
+	transform: translateY(100%);
+}
+.slider-image .fullwidth-title div:after {
+	bottom: 11px;
+	left: 0;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+}
+.slider-image  h2,
+.slider-image h4 {
+	margin: 0;
+	text-transform: uppercase;
+}
+.slider-image h2 {
+	font-weight: 400;
+	color: white;
+}
+.slider-image h4 {
+	display: block;
+	font-weight: 700;
+	background-color: #ffffff;
+	padding: 5px 10px;
+	color: #000000;
+}
+.slider-image span {
+	position: absolute;
+	bottom: 26%;
+	left: 162px;
+	text-align: left;
+	opacity: 0;
+	padding: 5px 0px 5px 3px;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1.5px;
+	color: #ffffff;
+	background-color: rgba(0, 0, 0, 0.21);
+}
+.slider-image span p {
+	margin: 0;
+}
+.slider-image  a {
+	text-decoration: none;
+	transition: 1s;
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+}
+.slider-image a:hover {
+	transform: scale(1.4);
+	background: black;
+}
+.fullwidth-title>div>a:hover .fullwidth-title>div>a>h2 {
+	color: #2b542c;
+}
+.slider-image:hover ,
+.slider-image.hover  {
+
+
+	-webkit-transition: 0.5s;
+	transition: 0.5s;
+}
+.slider-image {
+	-webkit-transition: 0.7s;
+	transition: 0.7s;
+}
+.slider-image:hover .fullwidth-title:before,
+.slider-image.hover .fullwidth-title:before,
+.slider-image:hover .fullwidth-title:after,
+.slider-image.hover .fullwidth-title:after,
+.slider-image:hover .fullwidth-title div:before,
+.slider-image.hover .fullwidth-title div:before,
+.slider-image:hover .fullwidth-title div:after,
+.slider-image.hover .fullwidth-title div:after {
+	-webkit-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
+.slider-image:hover .fullwidth-title:before,
+.slider-image.hover .fullwidth-title:before,
+.slider-image:hover .fullwidth-title:after,
+.slider-image.hover .fullwidth-title:after {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.15s;
+}
+.slider-image:hover span,
+.slider-image.hover span {
+	opacity: 1;
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+
