@@ -2,7 +2,7 @@
 $to_5_materials  = R::findCollection('articles', 'ORDER BY `likes` DESC LIMIT 5 ');
 ?>
 
-<div class="windy-main wow jackInTheBox" data-wow-duration="2.7s" data-wow-offset="150">
+<div class="windy-main wow zoomInRight" data-wow-duration="2.7s" data-wow-offset="150">
     <span>Top 5 Materials</span>
 
 
@@ -26,19 +26,19 @@ $to_5_materials  = R::findCollection('articles', 'ORDER BY `likes` DESC LIMIT 5 
                     </div>
                 </div>
                 <div class="windy-meta">
-                                        <span>
+                                    <span>
                                             <em class="fa fa-clock-o"></em>
                                             <abbr class="timeago" title="<?php echo $item['pubdate']; ?>"></abbr>
 
-                                        </span>
-                    <span>
+                                    </span>
+                                    <span>
                                            <em class="fa fa-user"></em>
                                            <a href="#" class="author-name">Priler</a>
-                                       </span>
-                    <span>
+                                    </span>
+                                    <span>
                                             <em class="fa fa-commenting-o"></em>
                                                 <?php echo $item['comment']; ?>
-                                        </span>
+                                    </span>
                 </div>
 </div>
             </li>

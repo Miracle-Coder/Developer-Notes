@@ -11,9 +11,6 @@ require_once '../db/db.php';
     <meta name="author" content="">
     <title>Developer Notes</title>
 
-    <!-- jQuery -->
-    <script src="/js/jquery-3.2.1.min.js"></script>
-
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.css">
@@ -39,36 +36,18 @@ require_once '../db/db.php';
     <link rel="stylesheet" href="/libs/slider/css/everslider.css">
     <link rel="stylesheet" href="/libs/slider/css/everslider-custom.css">
     <link rel="stylesheet" href="/libs/slider/css/layout.css">
-    <script src="/libs/slider/js/jquery.easing.1.3.js"></script>
-    <script src="/libs/slider/js/jquery.everslider.js"></script>
-    <script src="/libs/slider/js/jquery.mousewheel.js"></script>
-    <script src="/libs/slider/js/jquery.scrollUp.min.js"></script>
-    <script src="/libs/slider/js/respond.min.js"></script>
-
-    <!-- Bootstrap core JavaScript --->
-
-
-
 
 
     <!--- Font Awesome --->
     <link rel="stylesheet" href="/css/font awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/font awesome/css/font-awesome.min.css">
-    
+
     <!--- Fonts --->
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 
 
-
     <!--- Windy --->
     <link rel="stylesheet" href="/libs/windy/css/windy.css">
-    <script src="/libs/windy/js/modernizr.custom.79639.js"></script>
-    <script src="/libs/windy/js/jquery.windy.js"></script>
-
-
-    <!--- Scroll --->
-    <script src="/js/scroll.js"></script>
-
 
 
 </head>
@@ -96,10 +75,7 @@ require_once '../db/db.php';
         <!-- Login modal window animation -->
 
 
-
         <?php include '../connection/users.php' ?>
-
-
 
 
     </main>
@@ -107,8 +83,6 @@ require_once '../db/db.php';
 
 
     <!-- Image Logo -->
-
-
 
 
     <!-- particles.js container -->
@@ -121,9 +95,6 @@ require_once '../db/db.php';
             <div class="header-img-logo-bottom">Developer Notes</div>
             
         </div>
-
-
-
 
 
     <!-- fullwidth slider -->
@@ -240,14 +211,7 @@ require_once '../db/db.php';
                     echo '</div>';
                     ?>
 
-
-
-
-
                 </div>
-
-
-
 
 
                 <!-- Right main block -->
@@ -268,27 +232,16 @@ require_once '../db/db.php';
                     </div>
 
 
-
-
                     <!-- Accordian Categories -->
 
 
                     <?php include '../connection/accordian_categories.php' ?>
 
 
-
-
                     <!--We recommend -->
 
 
-
                     <?php include '../connection/we_recommend.php' ?>
-
-
-
-
-
-
 
 
                     <!-- Comments -->
@@ -303,46 +256,46 @@ require_once '../db/db.php';
 
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
-
-
-
-
-
     </div>
 
 
     <!-- Footer-->
 
 
-
     <?php include '../connection/footer.php' ?>
 
 
+    <!-- jQuery -->
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
 
 
-    <script type="text/javascript">
+    <!-- Slider JS -->
+
+    <script src="/libs/slider/js/jquery.easing.1.3.js" defer></script>
+    <script src="/libs/slider/js/jquery.everslider.js" defer></script>
+    <script src="/libs/slider/js/jquery.mousewheel.js" defer></script>
+    <script src="/libs/slider/js/jquery.scrollUp.min.js" defer></script>
+    <script src="/libs/slider/js/respond.min.js" defer></script>
+
+    <!-- Windy JS -->
+
+    <script src="/libs/windy/js/modernizr.custom.79639.js" defer></script>
+    <script src="/libs/windy/js/jquery.windy.js" defer></script>
+
+    <!--- Scroll --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js.map" defer></script>
+
+    <script type="text/javascript" defer>
         $(function(){
             $.scrollUp({animation: 'slide'});
             $('a[href="#"]').click(function(){ return false; });
         });
     </script>
-
-
-
 
 
 </div>
@@ -351,7 +304,7 @@ require_once '../db/db.php';
 <script>
     new WOW().init();
 </script>
-<script type="text/javascript">
+<script type="text/javascript" defer>
     $(document).ready(function(){
         $('#image_slider').everslider({
             mode: 'normal',
@@ -362,13 +315,15 @@ require_once '../db/db.php';
 
 
 <script src="/js/main.js" defer></script>
+<script src="/jquery.timeago.js" defer></script>
+<script src="/jquery.timeago.ru.js" defer></script>
 
-<script src="/jquery.timeago.js"></script>
-<script src="/jquery.timeago.ru.js"></script>
+<!-- particles scripts -->
 
-                    <!-- particles scripts -->
-<script src="/js/particles.js"></script>
-<script src="/js/app.js"></script>
+<script src="/js/particles.js" defer></script>
+<script src="/js/app.js" defer></script>
+
+
 
 
 </body>

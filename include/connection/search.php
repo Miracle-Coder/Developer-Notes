@@ -9,10 +9,7 @@ require_once '../db/db.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Blog</title>
-
-    <!-- jQuery -->
-    <script src="/js/jquery-3.2.1.min.js"></script>
+    <title>Developer Notes</title>
 
 
     <!-- Bootstrap core CSS -->
@@ -39,37 +36,25 @@ require_once '../db/db.php';
     <link rel="stylesheet" href="/libs/slider/css/everslider.css">
     <link rel="stylesheet" href="/libs/slider/css/everslider-custom.css">
     <link rel="stylesheet" href="/libs/slider/css/layout.css">
-    <script src="/libs/slider/js/jquery.easing.1.3.js"></script>
-    <script src="/libs/slider/js/jquery.everslider.js"></script>
-    <script src="/libs/slider/js/jquery.mousewheel.js"></script>
-    <script src="/libs/slider/js/jquery.scrollUp.min.js"></script>
-    <script src="/libs/slider/js/respond.min.js"></script>
-
-    <!-- Bootstrap core JavaScript --->
-
-
-
 
 
     <!--- Font Awesome --->
     <link rel="stylesheet" href="/css/font awesome/css/font-awesome.css">
     <link rel="stylesheet" href="/css/font awesome/css/font-awesome.min.css">
 
+    <!--- Fonts --->
+    <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 
 
     <!--- Windy --->
     <link rel="stylesheet" href="/libs/windy/css/windy.css">
-    <script src="/libs/windy/js/modernizr.custom.79639.js"></script>
-    <script src="/libs/windy/js/jquery.windy.js"></script>
-
-
-
-
 
 
 </head>
 
 <body>
+
+
 <!-- Preloader -->
 <div id="preloader">
     <div class="load">
@@ -92,10 +77,7 @@ require_once '../db/db.php';
         <!-- Login modal window animation -->
 
 
-
         <?php include '../connection/users.php' ?>
-
-
 
 
     </main>
@@ -106,16 +88,22 @@ require_once '../db/db.php';
 
 
 
+    <!-- particles.js container -->
+
+    <div id="particles-js"></div>
 
     <div class="header-img-logo">
-        <img src="/images/wefcwefcwe.png" alt="">
+
+        <img class="header-img-logo-top" src="/images/dokkenNelsonLogoDNonly.png">
+        <div class="header-img-logo-bottom">Developer Notes</div>
+
     </div>
 
 
 
 
-
     <!-- fullwidth slider -->
+
 
     <?php include '../connection/slider_carousel.php' ?>
 
@@ -160,14 +148,6 @@ require_once '../db/db.php';
                                                 <span class="posted-in">Posted in <a href="http://developer-notes.h1n.ru/include/pages/categories.php?id=<?php echo $item['categories_id']; ?>" class="link-animated"><?php echo $item['categories_name']; ?></a></span>
                                             </div>
                                             <div class="col-md-4 article-likes-simple wow bounceInLeft" data-wow-duration="4s" data-wow-offset="50">
-                                                <div class="article-likes">
-                                                    <a href="#" class="link-animated">
-                                            <span title="Мне нравится эта статья" class="article-likes-heart">
-                                                <i class="fa fa-heart fa-1" aria-hidden="true"></i>
-                                                <span class="article-likes-count"><?php echo $item['likes']; ?> likes</span>
-                                            </span>
-                                                    </a>
-                                                </div>
                                                 <div class="article-comment">
                                                     <a href="#" class="link-animated">
                                             <span class="comments-link-icon">
@@ -211,14 +191,7 @@ require_once '../db/db.php';
                     }
                     ?>
 
-
-
-
-
                 </div>
-
-
-
 
 
                 <!-- Right main block -->
@@ -239,14 +212,10 @@ require_once '../db/db.php';
                     </div>
 
 
-
-
                     <!-- Accordian Categories -->
 
 
                     <?php include '../connection/accordian_categories.php' ?>
-
-
 
 
                     <!--We recommend -->
@@ -256,115 +225,9 @@ require_once '../db/db.php';
                     <?php include '../connection/we_recommend.php' ?>
 
 
-
-
-
-
-
-
                     <!-- Comments -->
 
-                    <div class="new-comments wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="150">
-
-                        <div class="new-comments-tittle">
-                            <span>New Comments</span>
-                        </div>
-                        <div class="new-comments-content">
-                            <div class="new-comments-item">
-                                <div class="author-avatar">
-                                    <img src="/images/avatar-1.png" alt="">
-                                </div>
-                                <div class="new-comments-desk">
-                                    <div class="author">
-                                        <span>
-                                           <em class="fa fa-user"></em>
-                                           <a href="#" class="author-name">Priler</a>
-                                       </span>
-                                    </div>
-                                    <div class="new-comments-posted-in">
-                                        <span>
-                                            <em class="fa fa-newspaper-o"></em>
-                                            in<a href="#" class="article-categories"> «Trending Music»</a>
-                                        </span>
-                                    </div>
-                                    <div class="new-comments-text">
-                                        <span>Wizard by Garrix is very good, you can listen it in SoundCloud, ok.</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="new-comments-item">
-                                <div class="author-avatar">
-                                    <img src="/images/avatar-2.png" alt="">
-                                </div>
-                                <div class="new-comments-desk">
-                                    <div class="author">
-                                        <span>
-                                           <em class="fa fa-user"></em>
-                                           <a href="#" class="author-name">Priler</a>
-                                       </span>
-                                    </div>
-                                    <div class="new-comments-posted-in">
-                                        <span>
-                                            <em class="fa fa-newspaper-o"></em>
-                                             in<a href="#" class="article-categories"> «Trending Music»</a>
-                                        </span>
-                                    </div>
-                                    <div class="new-comments-text">
-                                        <span>Today so far, graphics in games is phantastic, who know's what will be in future? ...</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="new-comments-item">
-                                <div class="author-avatar">
-                                    <img src="/images/avatar-3.png" alt="">
-                                </div>
-                                <div class="new-comments-desk">
-                                    <div class="author">
-                                        <span>
-                                           <em class="fa fa-user"></em>
-                                           <a href="#" class="author-name">Priler</a>
-                                       </span>
-                                    </div>
-                                    <div class="new-comments-posted-in">
-                                        <span>
-                                            <em class="fa fa-newspaper-o"></em>
-                                             in<a href="#" class="article-categories"> «Trending Music»</a>
-                                        </span>
-                                    </div>
-                                    <div class="new-comments-text">
-                                        <span>Even though it's looks more like "Philosophy" stuff, you always know when Typography looks great ...</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="new-comments-item">
-                                <div class="author-avatar">
-                                    <img src="/images/avatar-4.png" alt="">
-                                </div>
-                                <div class="new-comments-desk">
-                                    <div class="author">
-                                        <span>
-                                           <em class="fa fa-user"></em>
-                                           <a href="#" class="author-name">Priler</a>
-                                       </span>
-                                    </div>
-                                    <div class="new-comments-posted-in">
-                                        <span>
-                                            <em class="fa fa-newspaper-o"></em>
-                                             in<a href="#" class="article-categories"> «Trending Music»</a>
-                                        </span>
-                                    </div>
-                                    <div class="new-comments-text">
-                                        <span>True story, pal. Code should be beautiful at least for the sake of extensibility...</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-
-
-                    </div>
+                    <?php include '../connection/new_comments.php' ?>
 
 
                     <!-- Windy -->
@@ -374,46 +237,46 @@ require_once '../db/db.php';
 
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
-
-
-
-
-
     </div>
 
 
     <!-- Footer-->
 
 
-
     <?php include '../connection/footer.php' ?>
 
 
+    <!-- jQuery -->
+
+    <script src="/js/jquery-3.2.1.min.js"></script>
 
 
-    <script type="text/javascript">
+    <!-- Slider JS -->
+
+    <script src="/libs/slider/js/jquery.easing.1.3.js" defer></script>
+    <script src="/libs/slider/js/jquery.everslider.js" defer></script>
+    <script src="/libs/slider/js/jquery.mousewheel.js" defer></script>
+    <script src="/libs/slider/js/jquery.scrollUp.min.js" defer></script>
+    <script src="/libs/slider/js/respond.min.js" defer></script>
+
+    <!-- Windy JS -->
+
+    <script src="/libs/windy/js/modernizr.custom.79639.js" defer></script>
+    <script src="/libs/windy/js/jquery.windy.js" defer></script>
+
+    <!--- Scroll --->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js.map" defer></script>
+
+    <script type="text/javascript" defer>
         $(function(){
             $.scrollUp({animation: 'slide'});
             $('a[href="#"]').click(function(){ return false; });
         });
     </script>
-
-
-
 
 
 </div>
@@ -422,7 +285,7 @@ require_once '../db/db.php';
 <script>
     new WOW().init();
 </script>
-<script type="text/javascript">
+<script type="text/javascript" defer>
     $(document).ready(function(){
         $('#image_slider').everslider({
             mode: 'normal',
@@ -433,9 +296,13 @@ require_once '../db/db.php';
 
 
 <script src="/js/main.js" defer></script>
+<script src="/jquery.timeago.js" defer></script>
+<script src="/jquery.timeago.ru.js" defer></script>
 
-<script src="/jquery.timeago.js"></script>
-<script src="/jquery.timeago.ru.js"></script>
+<!-- particles scripts -->
+
+<script src="/js/particles.js" defer></script>
+<script src="/js/app.js" defer></script>
 
 
 

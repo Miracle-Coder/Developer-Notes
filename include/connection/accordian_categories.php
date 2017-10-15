@@ -78,11 +78,6 @@ $header_menu = Show_Cat($tree);
 //Далее выводим на экран :)
 ?>
 
-
-
-
-
-
 <div class="accordian-categories wow zoomIn" data-wow-duration="2.5s" data-wow-offset="150">
     <div class="accordian-categories-tittles">
         Categories

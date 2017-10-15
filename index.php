@@ -11,9 +11,6 @@ require_once 'include/db/db.php';
     <meta name="author" content="">
     <title>Developer Notes</title>
 
-    <!-- jQuery -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
@@ -39,16 +36,6 @@ require_once 'include/db/db.php';
     <link rel="stylesheet" href="libs/slider/css/everslider.css">
     <link rel="stylesheet" href="libs/slider/css/everslider-custom.css">
     <link rel="stylesheet" href="libs/slider/css/layout.css">
-    <script src="libs/slider/js/jquery.easing.1.3.js"></script>
-    <script src="libs/slider/js/jquery.everslider.js"></script>
-    <script src="libs/slider/js/jquery.mousewheel.js"></script>
-    <script src="libs/slider/js/jquery.scrollUp.min.js"></script>
-    <script src="libs/slider/js/respond.min.js"></script>
-
-    <!-- Bootstrap core JavaScript --->
-
-
-
 
 
     <!--- Font Awesome --->
@@ -59,23 +46,15 @@ require_once 'include/db/db.php';
     <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
 
 
-
     <!--- Windy --->
     <link rel="stylesheet" href="libs/windy/css/windy.css">
-    <script src="libs/windy/js/modernizr.custom.79639.js"></script>
-    <script src="libs/windy/js/jquery.windy.js"></script>
-
-
-    <!--- Scroll --->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js.map"></script>
-
 
 
 </head>
 
 <body>
+
+
 <!-- Preloader -->
 <div id="preloader">
     <div class="load">
@@ -98,10 +77,7 @@ require_once 'include/db/db.php';
             <!-- Login modal window animation -->
 
 
-
             <?php include 'include/connection/users.php' ?>
-
-
 
 
         </main>
@@ -126,8 +102,8 @@ require_once 'include/db/db.php';
 
 
 
-
     <!-- fullwidth slider -->
+
 
         <?php include 'include/connection/slider_carousel.php' ?>
 
@@ -146,9 +122,6 @@ require_once 'include/db/db.php';
                 </div>
 
 
-
-
-
                 <!-- Right main block -->
                 <div class="col-md-4">
 
@@ -162,7 +135,6 @@ require_once 'include/db/db.php';
                         </div>
                         <form action="http://developer-notes.h1n.ru/include/connection/search.php" method="GET" id="serach-form">
                             <input class="search-input" name="search" type="search" placeholder="Search" required>
-
                         </form>
                     </div>
 
@@ -185,11 +157,6 @@ require_once 'include/db/db.php';
 
 
 
-
-
-
-
-
                     <!-- Comments -->
 
                     <?php include 'include/connection/new_comments.php' ?>
@@ -202,46 +169,46 @@ require_once 'include/db/db.php';
 
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
         </div>
-
-
-
-
-
     </div>
 
 
         <!-- Footer-->
 
 
-
                 <?php include 'include/connection/footer.php' ?>
 
 
+        <!-- jQuery -->
+
+<script src="js/jquery-3.2.1.min.js"></script>
 
 
-    <script type="text/javascript">
+        <!-- Slider JS -->
+
+<script src="libs/slider/js/jquery.easing.1.3.js" defer></script>
+<script src="libs/slider/js/jquery.everslider.js" defer></script>
+<script src="libs/slider/js/jquery.mousewheel.js" defer></script>
+<script src="libs/slider/js/jquery.scrollUp.min.js" defer></script>
+<script src="libs/slider/js/respond.min.js" defer></script>
+
+        <!-- Windy JS -->
+
+<script src="libs/windy/js/modernizr.custom.79639.js" defer></script>
+<script src="libs/windy/js/jquery.windy.js" defer></script>
+
+        <!--- Scroll --->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.6/SmoothScroll.min.js.map" defer></script>
+
+    <script type="text/javascript" defer>
         $(function(){
             $.scrollUp({animation: 'slide'});
             $('a[href="#"]').click(function(){ return false; });
         });
     </script>
-
-
-
 
 
     </div>
@@ -250,7 +217,7 @@ require_once 'include/db/db.php';
 <script>
     new WOW().init();
 </script>
-<script type="text/javascript">
+<script type="text/javascript" defer>
     $(document).ready(function(){
         $('#image_slider').everslider({
             mode: 'normal',
@@ -261,13 +228,13 @@ require_once 'include/db/db.php';
 
 
 <script src="js/main.js" defer></script>
+<script src="jquery.timeago.js" defer></script>
+<script src="jquery.timeago.ru.js" defer></script>
 
-<script src="jquery.timeago.js"></script>
-<script src="jquery.timeago.ru.js"></script> 
+        <!-- particles scripts -->
 
-                    <!-- particles scripts -->
-<script src="js/particles.js"></script>
-<script src="js/app.js"></script>
+<script src="js/particles.js" defer></script>
+<script src="js/app.js" defer></script>
 
 
 

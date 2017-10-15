@@ -5,7 +5,7 @@ $new_comments = R::findCollection('comments', 'ORDER BY `pubdate` DESC LIMIT 4')
 
 ?>
 
-<div class="new-comments wow fadeInRight" data-wow-duration="2.5s" data-wow-offset="150">
+<div class="new-comments wow bounceInRight" data-wow-duration="2.5s" data-wow-offset="150">
 
     <div class="new-comments-tittle">
         <span>New Comments</span>
@@ -47,9 +47,5 @@ while($item = $new_comments->next())
 
 
     </div>
-
-
-
-
 
 </div>
