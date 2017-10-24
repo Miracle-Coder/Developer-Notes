@@ -19,6 +19,10 @@ if (R::count('comments', "author = ?", array($data['name'])) > 0) {
     $comment->text = $data['text'];
     $comment->articles_id = $data['articles_id'];
     R::store($comment);
+
+    $article_comment = R::findOne('articles', " `id` = ? ", array($data['articles_id']));
+    $article_comment->comment = $article_comment->comment + 1;
+    R::store($article_comment);
     ?>
 <script>
 

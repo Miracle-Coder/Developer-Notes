@@ -2,7 +2,7 @@
 $we_recommend  = R::findCollection('articles', 'ORDER BY `comment` DESC LIMIT 5 ');
 ?>
 
-<div class="we-recommend wow flipInY" data-wow-duration="2.5s" data-wow-offset="150">
+<div class="we-recommend">
     <div class="we-recommend-tittle">
         <span>We recommend</span>
     </div>

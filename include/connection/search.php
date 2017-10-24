@@ -138,16 +138,16 @@ require_once '../db/db.php';
                         ?>
 
                         <article class="main-article">
-                            <div class="article-image wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="150" style="background-image: url(/images/<?php echo $item['image']; ?>);"></div>
-                            <div class="content-article wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50">
+                            <div class="article-image" style="background-image: url(/images/<?php echo $item['image']; ?>);"></div>
+                            <div class="content-article">
                                 <div class="content-article-header">
                                     <div class="entry-meta">
                                         <div class="row">
-                                            <div class="col-md-8 article-posted wow bounceInLeft" data-wow-duration="2.9s" data-wow-offset="50">
+                                            <div class="col-md-8 article-posted">
                                                 <span class="posted-on">Posted on <a href="#" class="link-animated"><?php echo $item['pubdate']; ?></a> </span>
                                                 <span class="posted-in">Posted in <a href="http://developer-notes.h1n.ru/include/pages/categories.php?id=<?php echo $item['categories_id']; ?>" class="link-animated"><?php echo $item['categories_name']; ?></a></span>
                                             </div>
-                                            <div class="col-md-4 article-likes-simple wow bounceInLeft" data-wow-duration="4s" data-wow-offset="50">
+                                            <div class="col-md-4 article-likes-simple">
                                                 <div class="article-comment">
                                                     <a href="#" class="link-animated">
                                             <span class="comments-link-icon">
@@ -159,9 +159,9 @@ require_once '../db/db.php';
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="article-header-title wow bounceInLeft" data-wow-duration="2.9s" data-wow-offset="50"><a href="http://developer-notes.h1n.ru/include/pages/article.php?id=<?php echo $item['id']; ?>"><?php echo $item['title']; ?></a></h2>
+                                    <h2 class="article-header-title"><a href="http://developer-notes.h1n.ru/include/pages/article.php?id=<?php echo $item['id']; ?>"><?php echo $item['title']; ?></a></h2>
                                 </div>
-                                <div class="content-article-body wow fadeIn" data-wow-duration="4s" data-wow-offset="50">
+                                <div class="content-article-body">
                                     <div class="content-article-body-text">
                                         <p>
                                             <span class="dropcap"><?php echo mb_substr($item['text'], 0, 1, 'utf-8'); ?></span>
@@ -169,19 +169,19 @@ require_once '../db/db.php';
                                         </p>
 
                                     </div>
-                                    <div class="custom-more wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50">
+                                    <div class="custom-more">
                                         <a href="http://developer-notes.h1n.ru/include/pages/article.php?id=<?php echo $item['id']; ?>" class="link-animated">Continue Reading</a>
                                     </div>
                                 </div>
                                 <div class="post-share">
                                     <ul class="social-nav model-7">
-                                        <li class="wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50"><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="wow bounceInLeft" data-wow-duration="2.2s" data-wow-offset="50">
+                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li>
                                             <a href="#" class="facebook"> <i class="fa fa-facebook"></i></a>
                                         </li>
-                                        <li class="wow bounceInLeft" data-wow-duration="2s" data-wow-offset="50"><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                                        <li class="wow bounceInLeft" data-wow-duration="1.8s" data-wow-offset="50"><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li class="wow bounceInLeft" data-wow-duration="1.6s" data-wow-offset="50"><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                                        <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                        <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -201,7 +201,7 @@ require_once '../db/db.php';
                     <!-- Search -->
 
 
-                    <div class="search wow flipInX" data-wow-duration="2.5s" data-wow-offset="150">
+                    <div class="search">
                         <div class="search-text">
                             <span>Lost Something?</span>
                         </div>

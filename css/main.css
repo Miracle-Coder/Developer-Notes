@@ -1888,53 +1888,41 @@ input:-webkit-autofill:active {
     clear: both;
     height: 0;
 }
-#menu>li:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    width: 1px;
-    height: 12px;
-    background: #ffffff;
-    top: 19px;
-    box-shadow: 4px -2px 0 #d2d2d2;
-    /* transform: rotate(30deg); */
-    z-index: 100;
+
+#menu-checkbox {
+    display: none;
 }
-#menu>li:last-child:after {
-    background: none;
-    box-shadow: none;
+
+main label:hover {
+    cursor: pointer;
 }
 
 #menu {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    position: relative;
-    z-index: 1;
-    float: left;
-    width: 100%;
-    border-radius: 3px;
+    margin-left: -215px;
+    width: 215px;
+    position: absolute;
+    margin-top: 2px;
+    background-color: white;
+    box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -2px 0 rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.15);
+    transition: all .25s ease-in-out;
+}
+
+.leb-checkbox {
     box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.15);
     background: #ffffff;
 }
 
-#menu, #menu ul {
-    list-style: none;
-    margin: 0;
-}
-
-#menu > li {
-    float: left;
-    position: relative;
-    perspective: 1000px;
-    padding-left: 10px;
-    padding-right: 10px;
+.menu-label>img {
+    width: 40px;
+    padding: 5px 0px;
+    margin-left: 10px;
 }
 
 #menu a {
     font-family: Roboto Condensed;
     display: block;
     position: relative;
-    z-index: 10;
+    /* z-index: 10; */
     padding: 15px 25px 15px 25px;
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -1943,82 +1931,161 @@ input:-webkit-autofill:active {
     font-size: 15px;
     letter-spacing: 0.1em;
     background: transparent;
-    transition: all .25s ease-in-out;
-
+    /* transition: all .25s ease-in-out; */
 }
 
-#menu > li:hover > a {
+#menu a:hover  {
     background: #333;
     color: rgba(0,223,252,1);
     text-shadow: none;
 }
 
-#menu li ul  {
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    width: 200px;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: transparent;
-    overflow: hidden;
-    transform-origin: 50% 0%;
+#menu-checkbox:checked ~ #menu {
+    margin: 0;
 }
 
+@media all and (min-width: 992px){
 
-#menu li:hover ul {
 
-    padding: 15px 0;
-    background: #333;
-    opacity: 1;
-    visibility: visible;
-    box-shadow: 1px 1px 7px rgba(0,0,0,.5);
-    animation-name: swingdown;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-
-}
-
-@keyframes swingdown {
-    0% {
-        opacity: .99999;
-        transform: rotateX(90deg);
+    #menu-checkbox {
+        display: none;
+    }
+    .leb-checkbox {
+        display: none;
     }
 
-    30% {
-        transform: rotateX(-20deg) rotateY(5deg);
-        animation-timing-function: ease-in-out;
+    #menu>li:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 12px;
+        background: #ffffff;
+        top: 19px;
+        box-shadow: 4px -2px 0 #d2d2d2;
+        /* transform: rotate(30deg); */
+        z-index: 100;
+    }
+    #menu>li:last-child:after {
+        background: none;
+        box-shadow: none;
     }
 
-    65% {
-        transform: rotateX(20deg) rotateY(-3deg);
-        animation-timing-function: ease-in-out;
+    #menu {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        z-index: 1;
+        float: left;
+        width: 100%;
+        border-radius: 3px;
+        box-shadow: inset 0 1px 1px rgba(255,255,255,.5), inset 0 -1px 0 rgba(0,0,0,.15), 0 1px 3px rgba(0,0,0,.15);
+        background: #ffffff;
     }
 
-    100% {
-        transform: rotateX(0);
-        animation-timing-function: ease-in-out;
+    #menu, #menu ul {
+        list-style: none;
+        margin: 0;
     }
-}
 
-#menu li li a {
-    padding-left: 15px;
-    font-weight: 400;
-    color: #ddd;
-    text-shadow: none;
-    border-top: dotted 1px transparent;
-    border-bottom: dotted 1px transparent;
-    transition: all .15s linear;
-}
+    #menu > li {
+        float: left;
+        position: relative;
+        perspective: 1000px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-#menu li li a:hover {
-    color: rgba(0,223,252,1);
-    border-top: dotted 1px rgba(255,255,255,.15);
-    border-bottom: dotted 1px rgba(255,255,255,.15);
-    background: rgba(0,223,252,.02);
+    #menu a {
+        font-family: Roboto Condensed;
+        display: block;
+        position: relative;
+        z-index: 10;
+        padding: 15px 25px 15px 25px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        line-height: 1;
+        font-weight: 600;
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        background: transparent;
+        transition: all .25s ease-in-out;
+
+    }
+
+    #menu > li:hover > a {
+        background: #333;
+        color: rgba(0,223,252,1);
+        text-shadow: none;
+    }
+
+    #menu li ul  {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 200px;
+        padding: 0;
+        opacity: 0;
+        visibility: hidden;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        background: transparent;
+        overflow: hidden;
+        transform-origin: 50% 0%;
+    }
+
+
+    #menu li:hover ul {
+
+        padding: 15px 0;
+        background: #333;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: 1px 1px 7px rgba(0,0,0,.5);
+        animation-name: swingdown;
+        animation-duration: 1s;
+        animation-timing-function: ease;
+
+    }
+
+    @keyframes swingdown {
+        0% {
+            opacity: .99999;
+            transform: rotateX(90deg);
+        }
+
+        30% {
+            transform: rotateX(-20deg) rotateY(5deg);
+            animation-timing-function: ease-in-out;
+        }
+
+        65% {
+            transform: rotateX(20deg) rotateY(-3deg);
+            animation-timing-function: ease-in-out;
+        }
+
+        100% {
+            transform: rotateX(0);
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    #menu li li a {
+        padding-left: 15px;
+        font-weight: 400;
+        color: #ddd;
+        text-shadow: none;
+        border-top: dotted 1px transparent;
+        border-bottom: dotted 1px transparent;
+        transition: all .15s linear;
+    }
+
+    #menu li li a:hover {
+        color: rgba(0,223,252,1);
+        border-top: dotted 1px rgba(255,255,255,.15);
+        border-bottom: dotted 1px rgba(255,255,255,.15);
+        background: rgba(0,223,252,.02);
+    }
 }
 
 /* Content-article */

@@ -118,8 +118,8 @@ require_once '../db/db.php';
                     <!-- Main article -->
 
                     <article class="main-article">
-                        <div class="article-image wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="150" style="background-image: url(/images/why-question-marketscale-b2b-marketing.png);"></div>
-                        <div class="content-article wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50">
+                        <div class="article-image" style="background-image: url(/images/why-question-marketscale-b2b-marketing.png);"></div>
+                        <div class="content-article">
                             <div class="content-article-header">
                                 <div class="entry-meta">
                                     <div class="row">
@@ -139,9 +139,9 @@ require_once '../db/db.php';
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="article-header-title wow bounceInLeft" data-wow-duration="2.9s" data-wow-offset="50"><a href="#">Why Register Here?</a></h2>
+                                <h2 class="article-header-title"><a href="#">About Blog</a></h2>
                             </div>
-                            <div class="content-article-body wow fadeIn" data-wow-duration="4s" data-wow-offset="50">
+                            <div class="content-article-body">
                                 <div class="content-article-body-text">
                                     <p>
                                         <span class="dropcap">L</span>
@@ -161,13 +161,13 @@ require_once '../db/db.php';
                             </div>
                             <div class="post-share">
                                 <ul class="social-nav model-7">
-                                    <li class="wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50"><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                    <li class="wow bounceInLeft" data-wow-duration="2.2s" data-wow-offset="50">
+                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li>
                                         <a href="#" class="facebook"> <i class="fa fa-facebook"></i></a>
                                     </li>
-                                    <li class="wow bounceInLeft" data-wow-duration="2s" data-wow-offset="50"><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                                    <li class="wow bounceInLeft" data-wow-duration="1.8s" data-wow-offset="50"><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                    <li class="wow bounceInLeft" data-wow-duration="1.6s" data-wow-offset="50"><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                                    <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ require_once '../db/db.php';
                     <!-- Search -->
 
 
-                    <div class="search wow flipInX" data-wow-duration="2.5s" data-wow-offset="150">
+                    <div class="search">
                         <div class="search-text">
                             <span>Lost Something?</span>
                         </div>

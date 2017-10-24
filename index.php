@@ -49,6 +49,10 @@ require_once 'include/db/db.php';
     <!--- Windy --->
     <link rel="stylesheet" href="libs/windy/css/windy.css">
 
+    <!-- arcticModal theme -->
+    <link rel="stylesheet" href="libs/arcticmodal/themes/simple.css">
+    <link rel="stylesheet" href="libs/arcticmodal/jquery.arcticmodal.css">
+
 
 </head>
 
@@ -60,6 +64,21 @@ require_once 'include/db/db.php';
     <div class="load">
         <div class="dot"></div>
         <div class="outline"><span></span></div>
+    </div>
+</div>
+
+<div style="display: none;">
+    <div class="box-modal" id="boxUserFirstInfo">
+        <div class="box-modal_close arcticmodal-close">закрыть</div>
+        <b>Здравствуй, милый человек!</b><br>
+        <br>
+        На сайте идет постоянная работа по обновлению и добавлению новых функций, что бы разнообразить Твое времяпровождение здесь и сделать его более приятным.
+        <br>
+        <br>
+        Надеюсь Тебе понравится здесь!
+        <br>
+        <br>
+        Добро пожаловать :)
     </div>
 </div>
 
@@ -129,7 +148,7 @@ require_once 'include/db/db.php';
                     <!-- Search -->
 
 
-                    <div class="search wow flipInX" data-wow-duration="2.5s" data-wow-offset="150">
+                    <div class="search">
                         <div class="search-text">
                             <span>Lost Something?</span>
                         </div>
@@ -237,6 +256,35 @@ require_once 'include/db/db.php';
 <script src="js/app.js" defer></script>
 
 
+<!-- arcticModal -->
+<script src="libs/arcticmodal/jquery.arcticmodal.js" defer></script>
+
+<!-- cookie -->
+<script src="//yandex.st/jquery/cookie/1.0/jquery.cookie.min.js" defer></script>
+
+<script defer>
+    (function($) {
+        $(function() {
+            // Проверим, есть ли запись в куках о посещении посетителя
+            // Если запись есть - ничего не делаем
+            if (!$.cookie('was')) {
+                // Покажем всплывающее окно
+                function getWindow(){
+                    $('#boxUserFirstInfo').arcticmodal({
+                        closeOnOverlayClick: false,
+                        closeOnEsc: true
+                    });
+                };
+                setTimeout (getWindow, 5000);
+            }
+            // Запомним в куках, что посетитель к нам уже заходил
+            $.cookie('was', true, {
+                expires: 1,
+                path: '/'
+            });
+        })
+    })(jQuery)
+</script>
 
 
 </body>

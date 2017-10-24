@@ -91,15 +91,15 @@ require_once '../db/db.php';
 
 
     <!-- particles.js container -->
-        
-        <div id="particles-js"></div>
 
-        <div class="header-img-logo">
+    <div id="particles-js"></div>
 
-            <img class="header-img-logo-top" src="/images/dokkenNelsonLogoDNonly.png">
-            <div class="header-img-logo-bottom">Developer Notes</div>
-            
-        </div>
+    <div class="header-img-logo">
+
+        <img class="header-img-logo-top" src="/images/dokkenNelsonLogoDNonly.png">
+        <div class="header-img-logo-bottom">Developer Notes</div>
+
+    </div>
 
 
 
@@ -120,91 +120,75 @@ require_once '../db/db.php';
                     <!-- Main article -->
 
                     <?php
-                        $article_id = $_GET['id'];
-                        $article = R::findOne('articles', " `id` = ? ", array($_GET['id']));
-                        $article->views = $article->views + 1;
-                        R::store($article);
+                    $article_id = $_GET['id'];
+                    $article = R::findOne('articles', " `id` = ? ", array($_GET['id']));
+                    $article->views = $article->views + 1;
+                    R::store($article);
 
-                        ?>
-                        <article class="main-article">
-                            <div class="article-image wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="150"
-                                 style="background-image: url(/images/<?php echo $article['image']; ?>);"></div>
-                            <div class="content-article wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50">
-                                <div class="content-article-header">
-                                    <div class="entry-meta">
-                                        <div class="row">
-                                            <div class="col-md-8 article-posted wow bounceInLeft"
-                                                 data-wow-duration="2.9s" data-wow-offset="50">
-                                                <span class="posted-on">Posted on <a href="#"
-                                                                                     class="link-animated"><?php echo $article['pubdate']; ?></a> </span>
-                                                <span class="posted-in">Posted in <a
-                                                        href="http://developer-notes.h1n.ru/include/pages/categories.php?id=<?php echo $article['categories_id']; ?>"
-                                                        class="link-animated"><?php echo $article['categories_name']; ?></a></span>
-                                            </div>
-                                            <div class="col-md-4 article-likes-simple wow bounceInLeft"
-                                                 data-wow-duration="4s" data-wow-offset="50">
-                                                
-                                                <div class="article-comment">
-                                                    <a href="#" class="link-animated">
+                    ?>
+                    <article class="main-article">
+                        <div class="article-image" style="background-image: url(/images/<?php echo $article['image']; ?>);"></div>
+                        <div class="content-article">
+                            <div class="content-article-header">
+                                <div class="entry-meta">
+                                    <div class="row">
+                                        <div class="col-md-8 article-posted">
+                                                <span class="posted-on">Posted on <a href="#" class="link-animated"><?php echo $article['pubdate']; ?></a> </span>
+                                            <span class="posted-in">Posted in <a href="http://developer-notes.h1n.ru/include/pages/categories.php?id=<?php echo $article['categories_id']; ?>" class="link-animated"><?php echo $article['categories_name']; ?></a></span>
+                                        </div>
+                                        <div class="col-md-4 article-likes-simple">
+
+                                            <div class="article-comment">
+                                                <a href="#" class="link-animated">
                                             <span class="comments-link-icon">
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </span>
-                                                        <span class="comments-link"><?php echo $article['views']; ?>
-                                                            views</span>
-                                                    </a>
-                                                </div>
+                                                    <span class="comments-link"><?php echo $article['views']; ?>views</span>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="article-header-title wow bounceInLeft" data-wow-duration="2.9s"
-                                        data-wow-offset="50"><a
-                                            href="http://developer-notes.h1n.ru/include/pages/article.php?id=<?php echo $article['id']; ?>"><?php echo $article['title']; ?></a>
-                                    </h2>
                                 </div>
-                                <div class="content-article-body wow fadeIn" data-wow-duration="4s"
-                                     data-wow-offset="50">
-                                    <div class="content-article-body-text">
-                                        <p>
-                                            <span
-                                                class="dropcap"><?php echo mb_substr($article['text'], 0, 1, 'utf-8'); ?></span>
-                                            <?php echo substr($article['text'], 1); ?>
-                                        </p>
-
-                                    </div>
-
-                                </div>
-                                <div class="post-share">
-                                    <ul class="social-nav model-7">
-                                        <li class="wow bounceInLeft" data-wow-duration="2.5s" data-wow-offset="50"><a
-                                                href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                                        <li class="wow bounceInLeft" data-wow-duration="2.2s" data-wow-offset="50">
-                                            <a href="#" class="facebook"> <i class="fa fa-facebook"></i></a>
-                                        </li>
-                                        <li class="wow bounceInLeft" data-wow-duration="2s" data-wow-offset="50"><a
-                                                href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                                        <li class="wow bounceInLeft" data-wow-duration="1.8s" data-wow-offset="50"><a
-                                                href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
-                                        <li class="wow bounceInLeft" data-wow-duration="1.6s" data-wow-offset="50"><a
-                                                href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
-                                    </ul>
-                                </div>
+                                <h2 class="article-header-title"><a href="http://developer-notes.h1n.ru/include/pages/article.php?id=<?php echo $article['id']; ?>"><?php echo $article['title']; ?></a>
+                                </h2>
                             </div>
-                        </article>
+                            <div class="content-article-body">
+                                <div class="content-article-body-text">
+                                    <p>
+                                            <span
+                                                    class="dropcap"><?php echo mb_substr($article['text'], 0, 1, 'utf-8'); ?></span><?php echo substr($article['text'], 1); ?>
+                                    </p>
+
+                                </div>
+
+                            </div>
+                            <div class="post-share">
+                                <ul class="social-nav model-7">
+                                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a href="#" class="facebook"> <i class="fa fa-facebook"></i></a>
+                                    </li>
+                                    <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
+                                    <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+                                    <li><a href="#" class="pinterest"><i class="fa fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
 
                     <?php if (isset($_SESSION['logged_user'])) : ?>
 
-                        <div class='comments wow slideInUp' data-wow-duration="2.5s" data-wow-offset="50">
+                        <div class='comments'>
                             <div class="comment-title">
                                 <span>Comments</span>
                             </div>
                             <div class="result_comment"></div>
-                                <div class='add-new'>
-                                    <input class='input your-name' id="comment_name" placeholder='Type your name here...' type='text'>
-                                    <textarea class='input your-msg' id="comment_text" placeholder='Type your message here...' name="comment_text"></textarea>
+                            <div class='add-new'>
+                                <input class='input your-name' id="comment_name" placeholder='Type your name here...' type='text'>
+                                <textarea class='input your-msg' id="comment_text" placeholder='Type your message here...' name="comment_text"></textarea>
 
-                                    <button value="<?php echo $article['id']; ?>" class='send-msg'>Send message</button>
+                                <button value="<?php echo $article['id']; ?>" class='send-msg'>Send message</button>
 
-                                </div>
+                            </div>
 
 
                             <?php
@@ -215,39 +199,22 @@ require_once '../db/db.php';
                                 echo '<div class="no-comments">There are no comments to this article <a title="Плак Плак :("><img alt="" src=http://developer-notes.h1n.ru/images/700410904.gif></a></div>';
                             }else
 
-                            foreach ($comment as $comment_item) {
-                                ?>
-                                <div class="comment">
-                                    <img class="avatar" src="https://i.imgur.com/BDuNOi3.png" alt="avatar">
-                                    <div class="body">
-                                        <a href=""><?php echo $comment_item['author']; ?></a>
-                                        <span><abbr class="timeago" title="<?php echo $comment_item['pubdate']; ?>"></abbr></span>
-                                        <br>
-                                        <br>
-                                        <p><?php echo $comment_item['text']; ?></p>
+                                foreach ($comment as $comment_item) {
+                                    ?>
+                                    <div class="comment">
+                                        <img class="avatar" src="https://i.imgur.com/BDuNOi3.png" alt="avatar">
+                                        <div class="body">
+                                            <a href=""><?php echo $comment_item['author']; ?></a>
+                                            <span><abbr class="timeago" title="<?php echo $comment_item['pubdate']; ?>"></abbr></span>
+                                            <br>
+                                            <br>
+                                            <p><?php echo $comment_item['text']; ?></p>
+                                        </div>
                                     </div>
-                                </div>
-                                <?php
-                            }
+                                    <?php
+                                }
 
                             ?>
-                            <script>
-
-                                $( ".send-msg" ).click(function() {
-                                    $.get( "http://developer-notes.h1n.ru/include/connection/comment.php", {
-                                            name: $( "#comment_name" ).val(),
-                                            text: $( "#comment_text" ).val(),
-                                            articles_id: $( ".send-msg" ).val()
-                                        },
-                                        function( data ) {
-                                            $( ".result_comment" ).html( data );
-
-                                        });
-                                });
-
-                            </script>
-
-
 
                         </div>
 
@@ -256,41 +223,41 @@ require_once '../db/db.php';
                     <?php else: ?>
 
 
-                    <div class="comment-not-registered wow zoomIn" data-wow-duration="2.5s" data-wow-offset="50">
-                        <span>That would leave a comment, please register.</span>
-                    </div>
-
-
-                    <div class='comments wow slideInUp' data-wow-duration="2.5s" data-wow-offset="50">
-                        <div class="comment-title">
-                            <span>Comments</span>
+                        <div class="comment-not-registered">
+                            <span>That would leave a comment, please register.</span>
                         </div>
 
-                        <?php
 
-                        $comment = R::find('comments', " `articles_id` = ? ORDER BY `pubdate` DESC ", array($_GET['id']));
-                        if (R::count('comments', "articles_id = ?", array($_GET['id'])) == 0) {
-
-                            echo '<div class="no-comments">There are no comments to this article <a title="Плак Плак :("><img alt="" src=http://developer-notes.h1n.ru/images/700410904.gif></a></div>';
-                        }else
-
-                        foreach ($comment as $comment_item) {
-                            ?>
-                            <div class="comment">
-                                <img class="avatar" src="https://i.imgur.com/BDuNOi3.png" alt="avatar">
-                                <div class="body">
-                                    <a href=""><?php echo $comment_item['author']; ?></a>
-                                    <span><abbr class="timeago" title="<?php echo $comment_item['pubdate']; ?>"></abbr></span>
-                                    <br>
-                                    <br>
-                                    <p><?php echo $comment_item['text']; ?></p>
-                                </div>
+                        <div class='comments'>
+                            <div class="comment-title">
+                                <span>Comments</span>
                             </div>
-                            <?php
-                        }
 
-                        ?>
-                    </div>
+                            <?php
+
+                            $comment = R::find('comments', " `articles_id` = ? ORDER BY `pubdate` DESC ", array($_GET['id']));
+                            if (R::count('comments', "articles_id = ?", array($_GET['id'])) == 0) {
+
+                                echo '<div class="no-comments">There are no comments to this article <a title="Плак Плак :("><img alt="" src=http://developer-notes.h1n.ru/images/700410904.gif></a></div>';
+                            }else
+
+                                foreach ($comment as $comment_item) {
+                                    ?>
+                                    <div class="comment">
+                                        <img class="avatar" src="https://i.imgur.com/BDuNOi3.png" alt="avatar">
+                                        <div class="body">
+                                            <a href=""><?php echo $comment_item['author']; ?></a>
+                                            <span><abbr class="timeago" title="<?php echo $comment_item['pubdate']; ?>"></abbr></span>
+                                            <br>
+                                            <br>
+                                            <p><?php echo $comment_item['text']; ?></p>
+                                        </div>
+                                    </div>
+                                    <?php
+                                }
+
+                            ?>
+                        </div>
 
                     <?php endif; ?>
 
@@ -304,13 +271,12 @@ require_once '../db/db.php';
                     <!-- Search -->
 
 
-                    <div class="search wow flipInX" data-wow-duration="2.5s" data-wow-offset="150">
+                    <div class="search">
                         <div class="search-text">
                             <span>Lost Something?</span>
                         </div>
-                        <form action="" id="serach-form">
-                            <input class="search-input" type="search" placeholder="Search">
-
+                        <form action="http://developer-notes.h1n.ru/include/connection/search.php" method="GET" id="serach-form">
+                            <input class="search-input" name="search" type="search" placeholder="Search" required>
                         </form>
                     </div>
 
@@ -353,6 +319,24 @@ require_once '../db/db.php';
     <!-- jQuery -->
 
     <script src="/js/jquery-3.2.1.min.js"></script>
+
+    <!-- Ajax  -->
+
+    <script defer>
+
+        $( ".send-msg" ).click(function() {
+            $.get( "http://developer-notes.h1n.ru/include/connection/comment.php", {
+                    name: $( "#comment_name" ).val(),
+                    text: $( "#comment_text" ).val(),
+                    articles_id: $( ".send-msg" ).val()
+                },
+                function( data ) {
+                    $( ".result_comment" ).html( data );
+
+                });
+        });
+
+    </script>
 
 
     <!-- Slider JS -->
